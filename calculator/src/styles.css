@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+}
+#container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    gap: 10px;
+    max-width: 640px;
+}
+
+#monitor {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column: 1 / 8;
+    border: 1px solid #999;
+    border-radius: 5px;
+    text-align: right;
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: xx-large;
+    background-color: #efefef;
+}
+
+mwc-button {
+    --mdc-typography-button-text-transform: none;
+    --mdc-typography-button-font-family: sans-serif;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}

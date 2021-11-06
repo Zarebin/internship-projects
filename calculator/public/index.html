@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Example App</title>
+
+    <!-- Add support for Web Components to older browsers. -->
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- Material Web uses standard JavaScript modules. -->
+    <script src="../dist/bundle.js" type="module"></script>
+
+    <!-- Your application must load the Roboto and Material Icons fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="monitor">0</div>
+
+
+        <mwc-button id="rad" label="Rad" raised></mwc-button>
+        <mwc-button id="deg" label="Deg" raised></mwc-button>
+        <mwc-button class="operator" id="factorial" label="x!" value="!" monitor-value="!" raised></mwc-button>
+        <mwc-button class="function" id="open-parenthesis" label="(" value="()" monitor-value="()" raised></mwc-button>
+        <mwc-button id="close-parenthesis" label=")" raised></mwc-button>
+        <mwc-button class="operator" id="percentage" label="%" value="%" monitor-value="%" raised></mwc-button>
+        <mwc-button class="operation" id="ce" label="CE" raised></mwc-button>
+        <mwc-button id="inverse" label="Inv" raised></mwc-button>
+        <mwc-button class="function" id="sin" label="sin" value="sin()" monitor-value="sin()" raised></mwc-button>
+        <mwc-button class="function" id="ln" label="ln" value="log()" monitor-value="ln()" raised></mwc-button>
+        <mwc-button class="operand" id="seven" label="7" value="7" monitor-value="7" raised></mwc-button>
+        <mwc-button class="operand" id="eight" label="8" value="8" monitor-value="8" raised></mwc-button>
+        <mwc-button class="operand" id="nine" label="9" value="9" monitor-value="9" raised></mwc-button>
+        <mwc-button class="operator" id="divide" label="÷" value="/" monitor-value="÷" raised></mwc-button>
+        <mwc-button class="operand" id="pi" label="π" value="pi" monitor-value="π" raised></mwc-button>
+        <mwc-button class="function" id="cos" label="cos" value="cos()" monitor-value="cos()" raised></mwc-button>
+        <mwc-button class="function" id="log" label="log" value="log10()" monitor-value="log()" raised></mwc-button>
+        <mwc-button class="operand" id="four" label="4" value="4" monitor-value="4" raised></mwc-button>
+        <mwc-button class="operand" id="five" label="5" value="5" monitor-value="5" raised></mwc-button>
+        <mwc-button class="operand" id="six" label="6" value="6" monitor-value="6" raised></mwc-button>
+        <mwc-button class="operator" id="multiply" label="×" value="*" monitor-value="×" raised></mwc-button>
+        <mwc-button class="operand" id="e" label="e" value="e" monitor-value="e" raised></mwc-button>
+        <mwc-button class="function" id="tan" label="tan" value="tan()" monitor-value="tan()" raised></mwc-button>
+        <mwc-button class="function" id="square-root" label="√" value="sqrt()" monitor-value="√()" raised></mwc-button>
+        <mwc-button class="operand" id="one" label="1" value="1" monitor-value="1" raised></mwc-button>
+        <mwc-button class="operand" id="two" label="2" value="2" monitor-value="2" raised></mwc-button>
+        <mwc-button class="operand" id="three" label="3" value="3" monitor-value="3" raised></mwc-button>
+        <mwc-button class="operator" id="minus" label="-" value="-" monitor-value="-" raised></mwc-button>
+        <mwc-button id="ans" label="Ans" raised></mwc-button>
+        <mwc-button class="operator" id="exp" label="EXP" value="e" monitor-value="E" raised></mwc-button>
+        <mwc-button class="operator" id="power" value="^" monitor-value="^" raised>
+            <p>x<sup>y</sup></p>
+        </mwc-button>
+        <mwc-button class="operand" id="zero" label="0" value="0" monitor-value="0" raised></mwc-button>
+        <mwc-button class="operand" id="point" label="." value="." monitor-value="." raised></mwc-button>
+        <mwc-button id="equals" label="=" raised></mwc-button>
+        <mwc-button class="operator" id="plus" label="+" value="+" monitor-value="+" raised></mwc-button>
+    </div>
+    <script>
+        // document.getElementById('power').setAttribute('value', <sup></sup>);
+    </script>
+</body>
+
+</html>
