@@ -13,7 +13,12 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'babel-loader',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-typescript']
+                    }
+                },
                 exclude: /node_modules/,
             },
             {
@@ -33,13 +38,21 @@ module.exports = {
                     "css-loader",
                     "sass-loader",
                 ],
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ]
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.json']
     },
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),
-        }
+        },
+        compress: true,
     },
     plugins: [
         new MiniCssExtractPlugin({

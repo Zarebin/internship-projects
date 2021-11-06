@@ -1,8 +1,73 @@
+$primary: #651fff;
+$secondary: #ff9100;
+
 * {
     padding: 0;
     margin: 0;
-    font-family: 'IranYekan', sans-serif;
+    box-sizing: border-box;
 }
 body{
     background-color: #efefef;
+    direction: rtl;
+}
+.wrapper{
+    width: 80%;
+    margin: 1rem 10%;
+}
+
+.pair-matching{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5%;
+}
+.pair-matching img{
+    max-width: 100%;
+}
+.pair-matching .card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .3s ease-in-out;
+    border: 1px solid $primary;
+    border-radius: 3px;
+    box-shadow: 0 0 3px $primary;
+    margin-bottom: .5%;
+}
+.pair-matching .card .front, .pair-matching .card .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.pair-matching .card .front{
+    background: $primary;
+    z-index: 2;
+}
+.pair-matching .card .back{
+    background: #eee;
+    transform: rotateY(180deg);
+}
+.pair-matching .card.flipped{
+    transform: rotateY(180deg);
+}
+.pair-matching .card.solved{
+    transform: rotateY(180deg);
+    opacity: .3;
+}
+.pair-matching .card.solved .front{
+    z-index: -1;
+}
+.pair-matching.size4 .card{
+    width: 24%;
+    padding-top: 24%;
+}
+.pair-matching.size6 .card{
+    width: 16%;
+    padding-top: 16%;
+}
+.pair-matching.size8 .card{
+    width: 12%;
+    padding-top: 12%;
 }
