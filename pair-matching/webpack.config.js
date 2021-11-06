@@ -1,10 +1,11 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDEV = process.env.NODE_ENV === 'development'
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: isDEV ? "development" : "production",
-    entry: './src/index.ts',
+    entry: './src/ts/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -13,7 +14,12 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'babel-loader',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-typescript']
+                    }
+                },
                 exclude: /node_modules/,
             },
             {
@@ -33,18 +39,29 @@ module.exports = {
                     "css-loader",
                     "sass-loader",
                 ],
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ]
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.json']
     },
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),
-        }
+        },
+        compress: true,
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "src/html", "index.html"),
         }),
     ],
 };
