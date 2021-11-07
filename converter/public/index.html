@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    
+    <script src="bundle.js"></script>
+    <link rel='stylesheet' href="./main.css">
+    
+    
+  
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      kjgjbj
+      <div >
+        <div >  
+            <div >
+                <mwc-select outlined label="unit" id='myselect'   >
+                    <mwc-list-item value="Area" >Area</mwc-list-item>
+                    <mwc-list-item value="Data Transfer Rate" >Data Transfer Rate</mwc-list-item>
+                    <mwc-list-item value="Digital Storage">Digital Storage</mwc-list-item>
+                    <mwc-list-item value="Energy">انرژی</mwc-list-item>
+                    <mwc-list-item value="Frequency">فرکانس</mwc-list-item>
+                    <mwc-list-item value="Fuel Economy">Fuel Economy</mwc-list-item>
+                    <mwc-list-item value="Length">طول</mwc-list-item>
+                    <mwc-list-item value="Mass">Mass</mwc-list-item>
+                    <mwc-list-item value="Plane Angle">Plane Angle</mwc-list-item>
+                    <mwc-list-item value="Pressure">فشار</mwc-list-item>
+                    <mwc-list-item value="Speed">سرعت</mwc-list-item>
+                    <mwc-list-item value="Temperature">دما</mwc-list-item>
+                    <mwc-list-item value="Time">زمان</mwc-list-item>
+                    <mwc-list-item value="Volume">Volume</mwc-list-item>
+                </mwc-select>
+
+            </div> 
+            <div class="pic"> 
+                <mwc-textfield  type="number" id="value"></mwc-textfield>
+                <mwc-select  id='Selection'>
+                      {/* <!-- Area --> */}
+                      <mwc-list-item class='Area' value='Square kilometer'>کیلومتر مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square meter'>Sمتر مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square mile'>مایل مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square yard'>یارد مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square foot'>پای مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square inch'>اینچ مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Hectare'>هکتار</mwc-list-item>
+                      {/* <!-- Data Transfer Rate --> */}
+                      <mwc-list-item class='Data Transfer Rate' value='Bit per second'>Bit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Kilobit per second'>Kilobit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Kilobyte per second'>Kilobyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Kibibit per second'>Kibibit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Megabit per second'>Megabit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Megabyte per second'>Megabyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Mebibit per second'>Mebibit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Gigabit per second'>Gigabit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Gigabyte per second'>Gigabyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Gibibit per second'>Gibibit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Terabit per second'>Terabit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Terabyte per second'>Terabyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Tebibit per second'>Tebibit per second</mwc-list-item>
+                      {/* <!-- Digital Storage --> */}
+                      <mwc-list-item class='Digital Storage' value='Bit'>بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kilobit'>کیلو بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kibibit'>کیبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Megabit'>مگا بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Mebibit'>مبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gigabit'>گیگا بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gibibit'>گیگی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Terabit'>ترا بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Tebibit'>تبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Petabit'>پتی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Pebibit'>پبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Byte'>بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kilobyte'>کیلو بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kibibyte'>کیبی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Megabyte'>مگا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Mebibyte'>مبی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gigabyte'>گیگا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gibibyte'>گیگی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Terabyte'>ترا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Tebibyte'>تبی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Petabyte'>پتا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Pebibyte'>پبی بایت</mwc-list-item>
+                      {/* <!-- Energy --> */}
+                      <mwc-list-item class='Energy' value='Nauticalmile'>Nauticalmile</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Joule'>ژول</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Kilojoule'>کیلوژول</mwc-list-item>
+                      <mwc-list-item class='Energy' value='>Gram calorie'>گرم کالری</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Kilocalorie'>کیلو کالری</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Watt hour'>Watt hour</mwc-list-item>
+                      <mwc-list-item class='Energy' value='kilowatt hour'>kilowatt hour</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Electronvolt'>Electronvolt</mwc-list-item>
+                      <mwc-list-item class='Energy' value='British thermal unit'>British thermal unit</mwc-list-item>
+                      <mwc-list-item class='Energy' value='US therm'>US therm</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Foot-pound'>Foot-pound</mwc-list-item>
+                      {/* <!-- Frequency --> */}
+                      <mwc-list-item class='Frequency' value='Hertz'>Hertz</mwc-list-item>
+                      <mwc-list-item class='Frequency' value='Kilohertz'>Kilohertz</mwc-list-item>
+                      <mwc-list-item class='Frequency' value='Megahertz'>Megahertz</mwc-list-item>
+                      <mwc-list-item class='Frequency' value='Gigahertz'>Gigahertz</mwc-list-item>
+                      {/* <!-- Fuel Economy --> */}
+                      <mwc-list-item class='Fuel Economy' value='Miles per gallon'>Miles per gallon</mwc-list-item>
+                      <mwc-list-item class='Fuel Economy' value='Miles per gallon'>Miles per gallon (Imperial)</mwc-list-item>
+                      <mwc-list-item class='Fuel Economy' value='Kilometer per liter'>Kilometer per liter</mwc-list-item>
+                      <mwc-list-item class='Fuel Economy' value='Liter per 100 kilometers'>Liter per 100 kilometers</mwc-list-item>
+                      {/* <!-- Length --> */}
+                      <mwc-list-item class='Length' value='Acre'>Acre</mwc-list-item>
+                      <mwc-list-item class='Length' value='kilometre' >کیلومتر</mwc-list-item>
+                      <mwc-list-item class='Length'value='Meter'>متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Centimeter'>سانتی متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Millimetre'>میلی متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='micrometres'>میکرو متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Nanometre'>نانو متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Mile'>مایل</mwc-list-item>
+                      <mwc-list-item class='Length' value='Yard'>یارد</mwc-list-item>
+                      <mwc-list-item class='Length' value='Foot'>فوت</mwc-list-item>
+                      <mwc-list-item class='Length' value='Inch'>اینچ</mwc-list-item>
+                      {/* <!-- Mass --> */}
+                      <mwc-list-item class='Mass' value='tonne'>tonne</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Kilogram'>Kilogram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Gram'>Gram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Milligram'>Milligram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Microgram'>Microgram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Imperial ton'>Imperial ton</mwc-list-item>
+                      <mwc-list-item class='Mass' value='US ton'>US ton</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Stone'>Stone</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Pound'>Pound</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Ounce'>Ounce</mwc-list-item>
+                      {/* <!-- Plane Angle --> */}
+                      <mwc-list-item class='Plane Angle' value='Degree'>Degree</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Gradian'>Gradian</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Milliradian'>Milliradian</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Minute of arc'>Minute of arc</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Radian'>Radian</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Second of arc'>Second of arc</mwc-list-item>
+                      {/* <!-- Pressure --> */}
+                      <mwc-list-item class='Pressure' value='Bar'>Bar</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='Pascal'>Pascal</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='pound per square inch'>pound per square inch</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='Standard atmosphere'>Standard atmosphere</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='Torr'>Torr</mwc-list-item>
+                      {/* <!-- Speed --> */}
+                      <mwc-list-item class='Speed' value='Miles per hour'>Miles per hour</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Foot per second'>Foot per second</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Meter per second'>Meter per second</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Kilometer per hour'>Kilometer per hour</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Knot'>Knot</mwc-list-item>
+                      {/* <!-- Temperature --> */}
+                      <mwc-list-item class='Temperature' value='Celsius'>Celsius</mwc-list-item>
+                      <mwc-list-item class='Temperature' value='Fahrenheit'>Fahrenheit</mwc-list-item>
+                      <mwc-list-item class='Temperature' value='Kelvin'>Kelvin</mwc-list-item>
+                      {/* <!-- Time --> */}
+                      <mwc-list-item class='Time' value='Nanosecond'>Nanosecond</mwc-list-item>
+                      <mwc-list-item class='Time' value='Microsecond'>Microsecond</mwc-list-item>
+                      <mwc-list-item class='Time' value='Millisecond'>Millisecond</mwc-list-item>
+                      <mwc-list-item class='Time' value='Second'>Second</mwc-list-item>
+                      <mwc-list-item class='Time' value='Minute'>Minute</mwc-list-item>
+                      <mwc-list-item class='Time' value='Hour'>Hour</mwc-list-item>
+                      <mwc-list-item class='Time' value='Day'>Day</mwc-list-item>
+                      <mwc-list-item class='Time' value='Week'>Week</mwc-list-item>
+                      <mwc-list-item class='Time' value='Month'>Month</mwc-list-item>
+                      <mwc-list-item class='Time' value='Calendar year'>Calendar year</mwc-list-item>
+                      <mwc-list-item class='Time' value='Decade'>Decade</mwc-list-item>
+                      <mwc-list-item class='Time' value='Century'>Century</mwc-list-item>
+                      {/* <!-- Volume --> */}
+                      <mwc-list-item class='Volume' value='US liquid gallon'>US liquid gallon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US liquid quart'>US liquid quart</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US liquid pint'>US liquid pint</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US legal cup'>US legal cup</mwc-list-item>
+                      <mwc-list-item class='Volume' value='fluid ounce'>fluid ounce</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US tablespoon'>US tablespoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US teaspoon'>US teaspoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Cubic meter'>Cubic meter</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Liter'>Liter</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Milliliter'>Milliliter</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial gallon'>Imperial gallon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='imp. quart'>imp. quart</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial pint'>Imperial pint</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial cup'>Imperial cup</mwc-list-item>
+                      <mwc-list-item class='Volume' value='fluid ounce'>fluid ounce</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial tablespoon'>Imperial tablespoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial teaspoon'>Imperial teaspoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Cubic foot'>Cubic foot</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Cubic inch'>Cubic inch</mwc-list-item>
+                  </mwc-select>
+            </div>
+            <div >=</div> 
+            <div class="pic" > 
+                    <mwc-textfield  type="number" id="convertedOutput"></mwc-textfield>
+                    <mwc-select  id='Selection2'>
+                                                {/* <!-- Area --> */}
+                      <mwc-list-item class='Area' value='Square kilometer'>کیلومتر مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square meter'>Sمتر مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square mile'>مایل مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square yard'>یارد مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square foot'>پای مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Square inch'>اینچ مربع</mwc-list-item>
+                      <mwc-list-item class='Area' value='Hectare'>هکتار</mwc-list-item>
+                      {/* <!-- Data Transfer Rate --> */}
+                      <mwc-list-item class='Data Transfer Rate' value='Bit per second'>Bit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Kilobit per second'>Kilobit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Kilobyte per second'>Kilobyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Kibibit per second'>Kibibit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Megabit per second'>Megabit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Megabyte per second'>Megabyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Mebibit per second'>Mebibit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Gigabit per second'>Gigabit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Gigabyte per second'>Gigabyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Gibibit per second'>Gibibit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Terabit per second'>Terabit per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Terabyte per second'>Terabyte per second</mwc-list-item>
+                      <mwc-list-item class='Data Transfer Rate' value='Tebibit per second'>Tebibit per second</mwc-list-item>
+                      {/* <!-- Digital Storage --> */}
+                      <mwc-list-item class='Digital Storage' value='Bit'>بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kilobit'>کیلو بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kibibit'>کیبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Megabit'>مگا بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Mebibit'>مبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gigabit'>گیگا بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gibibit'>گیگی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Terabit'>ترا بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Tebibit'>تبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Petabit'>پتی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Pebibit'>پبی بیت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Byte'>بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kilobyte'>کیلو بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Kibibyte'>کیبی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Megabyte'>مگا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Mebibyte'>مبی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gigabyte'>گیگا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Gibibyte'>گیگی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Terabyte'>ترا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Tebibyte'>تبی بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Petabyte'>پتا بایت</mwc-list-item>
+                      <mwc-list-item class='Digital Storage' value='Pebibyte'>پبی بایت</mwc-list-item>
+                      {/* <!-- Energy --> */}
+                      <mwc-list-item class='Energy' value='Nauticalmile'>Nauticalmile</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Joule'>ژول</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Kilojoule'>کیلوژول</mwc-list-item>
+                      <mwc-list-item class='Energy' value='>Gram calorie'>گرم کالری</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Kilocalorie'>کیلو کالری</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Watt hour'>Watt hour</mwc-list-item>
+                      <mwc-list-item class='Energy' value='kilowatt hour'>kilowatt hour</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Electronvolt'>Electronvolt</mwc-list-item>
+                      <mwc-list-item class='Energy' value='British thermal unit'>British thermal unit</mwc-list-item>
+                      <mwc-list-item class='Energy' value='US therm'>US therm</mwc-list-item>
+                      <mwc-list-item class='Energy' value='Foot-pound'>Foot-pound</mwc-list-item>
+                      {/* <!-- Frequency --> */}
+                      <mwc-list-item class='Frequency' value='Hertz'>Hertz</mwc-list-item>
+                      <mwc-list-item class='Frequency' value='Kilohertz'>Kilohertz</mwc-list-item>
+                      <mwc-list-item class='Frequency' value='Megahertz'>Megahertz</mwc-list-item>
+                      <mwc-list-item class='Frequency' value='Gigahertz'>Gigahertz</mwc-list-item>
+                      {/* <!-- Fuel Economy --> */}
+                      <mwc-list-item class='Fuel Economy' value='Miles per gallon'>Miles per gallon</mwc-list-item>
+                      <mwc-list-item class='Fuel Economy' value='Miles per gallon'>Miles per gallon (Imperial)</mwc-list-item>
+                      <mwc-list-item class='Fuel Economy' value='Kilometer per liter'>Kilometer per liter</mwc-list-item>
+                      <mwc-list-item class='Fuel Economy' value='Liter per 100 kilometers'>Liter per 100 kilometers</mwc-list-item>
+                      {/* <!-- Length --> */}
+                      <mwc-list-item class='Length' value='Acre'>Acre</mwc-list-item>
+                      <mwc-list-item class='Length' value='kilometre' >کیلومتر</mwc-list-item>
+                      <mwc-list-item class='Length'value='Meter'>متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Centimeter'>سانتی متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Millimetre'>میلی متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='micrometres'>میکرو متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Nanometre'>نانو متر</mwc-list-item>
+                      <mwc-list-item class='Length' value='Mile'>مایل</mwc-list-item>
+                      <mwc-list-item class='Length' value='Yard'>یارد</mwc-list-item>
+                      <mwc-list-item class='Length' value='Foot'>فوت</mwc-list-item>
+                      <mwc-list-item class='Length' value='Inch'>اینچ</mwc-list-item>
+                      {/* <!-- Mass --> */}
+                      <mwc-list-item class='Mass' value='tonne'>tonne</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Kilogram'>Kilogram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Gram'>Gram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Milligram'>Milligram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Microgram'>Microgram</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Imperial ton'>Imperial ton</mwc-list-item>
+                      <mwc-list-item class='Mass' value='US ton'>US ton</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Stone'>Stone</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Pound'>Pound</mwc-list-item>
+                      <mwc-list-item class='Mass' value='Ounce'>Ounce</mwc-list-item>
+                      {/* <!-- Plane Angle --> */}
+                      <mwc-list-item class='Plane Angle' value='Degree'>Degree</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Gradian'>Gradian</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Milliradian'>Milliradian</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Minute of arc'>Minute of arc</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Radian'>Radian</mwc-list-item>
+                      <mwc-list-item class='Plane Angle' value='Second of arc'>Second of arc</mwc-list-item>
+                      {/* <!-- Pressure --> */}
+                      <mwc-list-item class='Pressure' value='Bar'>Bar</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='Pascal'>Pascal</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='pound per square inch'>pound per square inch</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='Standard atmosphere'>Standard atmosphere</mwc-list-item>
+                      <mwc-list-item class='Pressure' value='Torr'>Torr</mwc-list-item>
+                      {/* <!-- Speed --> */}
+                      <mwc-list-item class='Speed' value='Miles per hour'>Miles per hour</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Foot per second'>Foot per second</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Meter per second'>Meter per second</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Kilometer per hour'>Kilometer per hour</mwc-list-item>
+                      <mwc-list-item class='Speed' value='Knot'>Knot</mwc-list-item>
+                      {/* <!-- Temperature --> */}
+                      <mwc-list-item class='Temperature' value='Celsius'>Celsius</mwc-list-item>
+                      <mwc-list-item class='Temperature' value='Fahrenheit'>Fahrenheit</mwc-list-item>
+                      <mwc-list-item class='Temperature' value='Kelvin'>Kelvin</mwc-list-item>
+                      {/* <!-- Time --> */}
+                      <mwc-list-item class='Time' value='Nanosecond'>Nanosecond</mwc-list-item>
+                      <mwc-list-item class='Time' value='Microsecond'>Microsecond</mwc-list-item>
+                      <mwc-list-item class='Time' value='Millisecond'>Millisecond</mwc-list-item>
+                      <mwc-list-item class='Time' value='Second'>Second</mwc-list-item>
+                      <mwc-list-item class='Time' value='Minute'>Minute</mwc-list-item>
+                      <mwc-list-item class='Time' value='Hour'>Hour</mwc-list-item>
+                      <mwc-list-item class='Time' value='Day'>Day</mwc-list-item>
+                      <mwc-list-item class='Time' value='Week'>Week</mwc-list-item>
+                      <mwc-list-item class='Time' value='Month'>Month</mwc-list-item>
+                      <mwc-list-item class='Time' value='Calendar year'>Calendar year</mwc-list-item>
+                      <mwc-list-item class='Time' value='Decade'>Decade</mwc-list-item>
+                      <mwc-list-item class='Time' value='Century'>Century</mwc-list-item>
+                      {/* <!-- Volume --> */}
+                      <mwc-list-item class='Volume' value='US liquid gallon'>US liquid gallon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US liquid quart'>US liquid quart</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US liquid pint'>US liquid pint</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US legal cup'>US legal cup</mwc-list-item>
+                      <mwc-list-item class='Volume' value='fluid ounce'>fluid ounce</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US tablespoon'>US tablespoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='US teaspoon'>US teaspoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Cubic meter'>Cubic meter</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Liter'>Liter</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Milliliter'>Milliliter</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial gallon'>Imperial gallon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='imp. quart'>imp. quart</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial pint'>Imperial pint</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial cup'>Imperial cup</mwc-list-item>
+                      <mwc-list-item class='Volume' value='fluid ounce'>fluid ounce</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial tablespoon'>Imperial tablespoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Imperial teaspoon'>Imperial teaspoon</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Cubic foot'>Cubic foot</mwc-list-item>
+                      <mwc-list-item class='Volume' value='Cubic inch'>Cubic inch</mwc-list-item>
+                      </mwc-select>
+            </div> 
+                
+        </div>
+
+<mwc-button id="myButton" label="Click Me!" raised ></mwc-button>
+
+  </div>
+
+      </div>
+      
+  </body>
+</html>
