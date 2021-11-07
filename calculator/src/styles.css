@@ -22,6 +22,12 @@ body {
     background-color: #efefef;
 }
 
+#secondary {
+    font-size: small;
+    color: #666;
+    min-height: 16px;
+}
+
 mwc-button {
     --mdc-typography-button-text-transform: none;
     --mdc-typography-button-font-family: sans-serif;

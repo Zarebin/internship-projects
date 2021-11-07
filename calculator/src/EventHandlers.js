@@ -1,4 +1,3 @@
-// import { evaluate } from 'mathjs';
 import { create, all } from 'mathjs';
 const math = create(all);
 
@@ -9,8 +8,12 @@ math.config({
 });
 
 
-const setMonitor = (innerHTML) => {
-    const monitor = document.getElementById('monitor');
+const setMonitorPrimaryExpression = (innerHTML) => {
+    const monitor = document.getElementById('primary');
+    monitor.innerHTML = innerHTML;
+};
+const setMonitorSecondaryExpression = (innerHTML) => {
+    const monitor = document.getElementById('secondary');
     monitor.innerHTML = innerHTML;
 };
 function isValidButton(lastButton, currentButton) {
@@ -29,6 +32,7 @@ function pushCurrentButton(buttonsHistory, e) {
 }
 
 export default () => {
+    let ans = 0;
     let expression = '';
     let cursor = 0;
     let monitorExpression = '';
@@ -38,6 +42,7 @@ export default () => {
     const buttons = document.querySelectorAll('.operand,.operator,.function');
     for (let button of buttons) {
         button.addEventListener('click', (e) => {
+
             let currentButton = {
                 id: e.target.id,
                 type: e.target.className,
@@ -45,6 +50,16 @@ export default () => {
                 label: e.target.label,
                 monitorValue: e.target.getAttribute('monitor-value'),
             };
+            if (buttonsHistory.length !== 0) {
+                if (buttonsHistory[buttonsHistory.length - 1].id === 'equals' && currentButton.type !== 'operator') {
+                    expression = '';
+                    monitorExpression = '';
+                }
+            }
+            if (currentButton.id === 'ans') {
+                currentButton.value = ans;
+                currentButton.monitorValue = 'Ans';
+            }
             if (isValidButton(buttonsHistory, currentButton)) {
                 const start = expression.slice(0, cursor);
                 const end = expression.slice(cursor, expression.length);
@@ -62,7 +77,8 @@ export default () => {
                 }
                 buttonsHistory.push(currentButton);
             }
-            setMonitor(monitorExpression);
+            setMonitorSecondaryExpression('Ans' + '=' + ans);
+            setMonitorPrimaryExpression(monitorExpression);
         });
     }
 
@@ -70,19 +86,25 @@ export default () => {
     equalsButton.addEventListener('click', (e) => {
         let result = math.evaluate(expression);
         if (!Number.isNaN(result)) {
-            setMonitor(result);
+            setMonitorSecondaryExpression(monitorExpression);
+            setMonitorPrimaryExpression(result);
+            ans = result;
+            monitorExpression = '' + ans;
+            expression = '' + ans;
             pushCurrentButton(buttonsHistory, e);
         }
     });
 
-    const closeParenthesis = document.getElementById('close-parenthesis');
-    closeParenthesis.addEventListener('click', (e) => {
+    const closeParenthesisButton = document.getElementById('close-parenthesis');
+    closeParenthesisButton.addEventListener('click', (e) => {
         if (expression.length !== cursor) {
             cursor++;
             monitorCursor++;
             pushCurrentButton(buttonsHistory, e);
         }
     });
+
+    const ansButton = document.getElementById('ans')
 
     const ceButton = document.getElementById('ce');
     ceButton.addEventListener('click', () => {
@@ -109,11 +131,12 @@ export default () => {
                 monitorExpression = '';
                 monitorCursor = 0;
                 buttonsHistory = [];
+                setMonitorSecondaryExpression('Ans' + '=' + ans);
             } else if (lastButton.id === 'close-parenthesis') {
                 cursor--;
                 monitorCursor--;
             }
         }
-        setMonitor(monitorExpression.length === 0 ? 0 : monitorExpression);
+        setMonitorPrimaryExpression(monitorExpression.length === 0 ? 0 : monitorExpression);
     });
 };

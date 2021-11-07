@@ -20,7 +20,10 @@
 <body>
     <div id="container">
 
-        <div id="monitor">0</div>
+        <div id="monitor">
+            <div id="secondary"></div>
+            <div id="primary">0</div>
+        </div>
 
 
         <mwc-button id="rad" label="Rad" raised></mwc-button>
@@ -51,7 +54,7 @@
         <mwc-button class="operand" id="two" label="2" value="2" monitor-value="2" raised></mwc-button>
         <mwc-button class="operand" id="three" label="3" value="3" monitor-value="3" raised></mwc-button>
         <mwc-button class="operator" id="minus" label="-" value="-" monitor-value="-" raised></mwc-button>
-        <mwc-button id="ans" label="Ans" raised></mwc-button>
+        <mwc-button id="ans" class="operand" label="Ans" raised></mwc-button>
         <mwc-button class="operator" id="exp" label="EXP" value="e" monitor-value="E" raised></mwc-button>
         <mwc-button class="operator" id="power" value="^" monitor-value="^" raised>
             <p>x<sup>y</sup></p>
