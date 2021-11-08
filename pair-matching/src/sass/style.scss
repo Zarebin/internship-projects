@@ -1,6 +1,17 @@
 $primary: #651fff;
 $secondary: #ff9100;
 
+@font-face {
+    font-family: IranYekan;
+    font-weight: normal;
+    src: url('../fonts/IRANYekanWebRegular.woff2');
+}
+@font-face {
+    font-family: IranYekan;
+    font-weight: 400;
+    src: url('../fonts/IRANYekanWebMedium.woff2');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -9,23 +20,25 @@ $secondary: #ff9100;
 body{
     background-color: #efefef;
     direction: rtl;
+    --mdc-theme-primary: #651fff;
+    --mdc-typography-font-family: IranYekan;
 }
+
 .wrapper{
     width: 80%;
     margin: 1rem 10%;
 }
 
-.pair-matching{
-    margin: 1rem;
+.pair-matching .game{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: .5%;
 }
-.pair-matching img{
+.pair-matching .game img{
     max-width: 100%;
 }
-.pair-matching .card{
+.pair-matching .game .card{
     position: relative;
     transform-style: preserve-3d;
     transition: transform .3s ease-in-out;
@@ -33,41 +46,49 @@ body{
     border-radius: 3px;
     box-shadow: 0 0 3px $primary;
     margin-bottom: .5%;
+    cursor: pointer;
 }
-.pair-matching .card .front, .pair-matching .card .back{
+.pair-matching .game .card .front, .pair-matching .game .card .back{
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
 }
-.pair-matching .card .front{
+.pair-matching .game .card .front{
     background: $primary;
     z-index: 2;
 }
-.pair-matching .card .back{
+.pair-matching .game .card .back{
     background: #eee;
     transform: rotateY(180deg);
 }
-.pair-matching .card.flipped{
+.pair-matching .game .card.flipped{
     transform: rotateY(180deg);
 }
-.pair-matching .card.solved{
+.pair-matching .game .card.solved{
     transform: rotateY(180deg);
     opacity: .3;
 }
-.pair-matching .card.solved .front{
+.pair-matching .game .card.solved .front{
     z-index: -1;
 }
-.pair-matching.size4 .card{
+.pair-matching .game.size4 .card{
     width: 24%;
     padding-top: 24%;
 }
-.pair-matching.size6 .card{
+.pair-matching .game.size6 .card{
     width: 16%;
     padding-top: 16%;
 }
-.pair-matching.size8 .card{
+.pair-matching .game.size8 .card{
     width: 12%;
     padding-top: 12%;
+}
+.pair-matching .settings {
+    display: flex;
+    margin-bottom: 1rem;
+}
+.pair-matching .settings mwc-select{
+    direction: ltr;
 }

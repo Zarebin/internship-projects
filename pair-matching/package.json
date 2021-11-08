@@ -4,7 +4,7 @@
   "private": true,
   "author": "Hamed Mahmoudkhani <ainyava@gmail.com> (https://ainyava.ir)",
   "scripts": {
-    "start": "webpack serve --open",
+    "start": "webpack serve",
     "build": "webpack"
   },
   "devDependencies": {
@@ -12,11 +12,15 @@
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
     "@material/mwc-button": "^0.25.3",
+    "@material/mwc-list": "^0.25.3",
     "@material/mwc-select": "^0.25.3",
     "@types/mini-css-extract-plugin": "^2.4.0",
+    "@types/webpack-env": "^1.16.3",
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.0",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.3",
     "node-sass": "^6.0.1",
     "sass": "^1.43.4",

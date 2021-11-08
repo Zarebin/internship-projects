@@ -1,17 +1,20 @@
-
 // render cards
+import {icons} from "./settings";
 
 export const renderUI = (game: any) => {
 
-    game.dom = document.querySelector('.pair-matching');
+    game.wrapper = document.querySelector('.pair-matching');
+    game.dom = document.querySelector('.pair-matching .game');
 
-    game.dom.classList.value = `pair-matching size${game.size}`;
+    game.dom.innerHTML = '';
 
+    game.dom.classList.value = `game size${game.size}`;
+    
     for (let icon of game.icons) {
         game.dom.innerHTML += `
-            <div class="card" data-name=${icon.replace('.svg', '')}>
+            <div class="card" data-name=${icon}>
                 <div class="front"></div>
-                <div class="back"><img src="img/${game.iconTheme}/${icon}" alt=${icon.replace('.svg', '')}></div>
+                <div class="back">${icons[game.iconTheme][icon]}</div>
             </div>`;
     }
 
