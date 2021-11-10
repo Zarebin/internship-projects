@@ -12,7 +12,7 @@ $secondary: #ff9100;
     src: url('../fonts/IRANYekanWebMedium.woff2');
 }
 
-* {
+.pair-matching * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -29,11 +29,15 @@ body{
     margin: 1rem 10%;
 }
 
+.pair-matching * {
+    font-family: IranYekan, sans-serif;
+}
 .pair-matching .game{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: .5%;
+    position: relative;
 }
 .pair-matching .game img{
     max-width: 100%;
@@ -91,4 +95,37 @@ body{
 }
 .pair-matching .settings mwc-select{
     direction: ltr;
+}
+.pair-matching .time {
+    direction: ltr;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    padding: 3px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #777;
+}
+.pair-matching .time div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 0 50%;
+}
+.pair-matching .game .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.pair-matching .game .overlay span{
+    font-size: 1.2rem;
 }
