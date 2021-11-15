@@ -1,3 +1,3 @@
-# calendar
-Behrad
-time.ir
+# Calendar by pure JS
+Behrad Hajmiri
+
