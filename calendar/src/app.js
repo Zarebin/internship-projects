@@ -138,6 +138,8 @@ var azar = {
 
 var months = [farvardin, ordibehesht, khordad, tir, mordad, shahrivar, mehr, aban, azar, dey, bahman, esfand];
 
+// ________________________________________________table
+
 monthTable(monthNumber);
 
 function monthTable(monthNumber) {
@@ -165,6 +167,8 @@ function monthTable(monthNumber) {
       </td>`;
    }
 }
+
+// ________________________________________________functions
 
 function nextMonth() {
    if (monthNumber < 8) {

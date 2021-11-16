@@ -31,21 +31,30 @@ td:nth-child(7) {
    color: red;
 }
 
-#aban tbody tr:last-child td:nth-last-child(5),
-#aban tbody tr:last-child td:nth-last-child(4),
-#aban tbody tr:last-child td:nth-last-child(3),
-#aban tbody tr:last-child td:nth-last-child(2),
-#aban tbody tr:last-child td:last-child,
-#mehr tbody tr:first-child td:first-child,
-#mehr tbody tr:first-child td:nth-child(2),
-#mehr tbody tr:first-child td:nth-child(3),
-#mehr tbody tr:first-child td:nth-child(4),
-#mehr tbody tr:first-child td:nth-child(5),
-#azar tbody tr:first-child td:first-child,
-#azar tbody tr:first-child td:nth-child(2),
-#azar tbody tr:last-child td:nth-last-child(3),
-#azar tbody tr:last-child td:nth-last-child(2),
-#azar tbody tr:last-child td:nth-last-child(1) {opacity: .2;}
+#aban tbody tr:last-child {
+   @for $i from 1 through 5 {
+      td:nth-last-child(#{$i}) {opacity: .2}
+   }
+}
+
+#mehr tbody tr:first-child {
+   td:first-child  {opacity: .2}
+   @for $i from 2 through 5 {
+      td:nth-child(#{$i}) {opacity: .2}
+   }
+}
+
+#azar tbody {
+   tr:first-child {
+      td:first-child, 
+      td:nth-child(2) {opacity: .2}
+   }
+   tr:last-child {
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {opacity: .2;}
+   }
+}
 
 #aban tbody tr:first-child td:nth-child(2),
 #mehr tbody tr:nth-child(2) td:nth-child(3),
@@ -175,6 +184,7 @@ h1, h2, h3, h4, h5 {
    --mdc-typography-button-font-size: 26px;
    transition: all .3s ease-in-out;
    border-radius: 5px;
+   letter-spacing:-10px;
 }
 
 mwc-button {
@@ -182,6 +192,7 @@ mwc-button {
    border: none;
    --mdc-typography-font-family: 'IRANYekan',tahoma;
    --mdc-ripple-color: transparent;
+   --mdc-typography-button-letter-spacing: 0;
 }
 
 @keyframes buttons {
