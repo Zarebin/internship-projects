@@ -1,0 +1,220 @@
+@font-face{font-family:"IRANYekan"; src:url("fonts/IRANYekanWebRegular.woff2") format("woff")}
+
+:root {
+   font-family:'IRANYekan',tahoma;
+   direction: rtl;
+}
+
+table, th, td {
+   border-collapse: collapse;
+   text-align: center;
+   table-layout: fixed;
+}
+
+thead {
+   height: 50px;
+   background-color:#ff9100;
+   text-align: center;
+   font-size: 16px;
+}
+
+td {
+   padding: 5px;
+}
+
+table {
+   width: 100%;
+   height: 100%;
+}
+
+td:nth-child(7) {
+   color: red;
+}
+
+#aban tbody tr:last-child {
+   @for $i from 1 through 5 {
+      td:nth-last-child(#{$i}) {opacity: .2}
+   }
+}
+
+#mehr tbody tr:first-child {
+   td:first-child  {opacity: .2}
+   @for $i from 2 through 5 {
+      td:nth-child(#{$i}) {opacity: .2}
+   }
+}
+
+#azar tbody {
+   tr:first-child {
+      td:first-child, 
+      td:nth-child(2) {opacity: .2}
+   }
+   tr:last-child {
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {opacity: .2;}
+   }
+}
+
+#aban tbody tr:first-child td:nth-child(2),
+#mehr tbody tr:nth-child(2) td:nth-child(3),
+#mehr tbody tr:nth-child(3) td:nth-child(4),
+#mehr tbody tr:nth-child(3) td:nth-child(6) {color: red;}
+
+.holiday {
+   color: red;
+}
+
+#date-time {
+   display: flex;
+   justify-content: space-between;
+   width: 600px;
+   margin-right: 10px;
+   font-size: 24px;
+}
+
+#time {
+   text-align: center;
+   margin: 20px 10px;
+   padding: 5px;
+}
+
+#date {
+   text-align: center;
+   margin: 20px 10px;
+   border-radius: 5px;
+   padding: 5px;
+}
+
+#month {
+   font-size: 18px;
+   padding-bottom: 20px;
+   text-align: center;
+   line-height: 1.5;
+}
+
+main {
+   margin: 20px 100px 0 0 ;
+}
+
+#mainCalendar {
+   width: 600px;
+   float: right;
+   padding: 10px;
+   box-shadow: 0 0 20px 5px #651fff;
+   margin: 0 0 30px 30px;
+   border-radius: 1%;
+}
+
+.today {
+   border-radius: 10%;
+   color: #651fff;
+   box-shadow: 0 0 4px 3px #651fff;
+}
+
+.shamsi {
+   font-size: 25px;
+   margin-bottom: 5px;
+}
+
+.miladi {
+   font-size: 17px;
+   float:right;
+   margin-right: 5px;
+   opacity: .7;
+}
+
+.ghamari {
+   font-size: 17px;
+   float:left;
+   margin-left: 5px;
+   opacity: .7;
+   padding: 0;
+}
+
+#mainMonasebat {
+   float: right;
+}
+
+#monasebatha {
+   padding-top: 20px;
+   font-size: 18px;
+   line-height: 1.5;
+}
+
+#monasebat {
+   color: #ff9100;
+   font-size: 18px;
+   padding: 10px 0;
+   border-bottom: #ff9100 solid 1px;
+}
+
+h1, h2, h3, h4, h5 {
+   margin: 0;
+}
+
+#monthGhamari {
+   opacity: .7;
+}
+
+#monthMiladi {
+   padding-top: 5px;
+   opacity: .5;
+}
+
+.nextMonth {
+   float:left;
+   padding-bottom: 5px;
+   border: none;
+   border-bottom: #651fff 2px solid;
+   --mdc-typography-button-font-size: 16px;
+}
+
+.perviousMonth {
+   float:right;
+   padding-bottom: 5px;
+   border-bottom: #651fff 2px solid;
+   --mdc-typography-button-font-size: 16px;
+}
+
+#goToToday {
+   width: 600px;
+   margin: 0 10px 30px 0;
+   box-shadow: 0 0 10px 1px #651fff;
+   --mdc-typography-button-font-size: 26px;
+   transition: all .3s ease-in-out;
+   border-radius: 5px;
+   letter-spacing:-10px;
+}
+
+mwc-button {
+   background-color: transparent;
+   border: none;
+   --mdc-typography-font-family: 'IRANYekan',tahoma;
+   --mdc-ripple-color: transparent;
+   --mdc-typography-button-letter-spacing: 0;
+}
+
+@keyframes buttons {
+   50% {border-bottom-color: #661fff7e;}
+   100% {border-bottom-color: #661fff00;}
+}
+
+#goToToday:hover {
+   background-color: #651fff;
+   --mdc-theme-primary: white;
+}
+
+#goToToday:active {
+   background-color: transparent;
+   --mdc-theme-primary: #651fff;
+}
+
+.nextMonth:hover, .perviousMonth:hover {
+   animation: buttons .2s;
+   animation-fill-mode: forwards;  
+}
+
+.nextMonth:active, .perviousMonth:active {
+   opacity: .2;
+}
